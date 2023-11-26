@@ -1,5 +1,5 @@
 {% set name = "rsatoolbox" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rsatoolbox-{{ version }}.tar.gz
-  sha256: f519b018ac4b4ce215848d51501ec1f5ea10dc35a31ea9d810cfd115100affa2
+  sha256: 439839fb20e2efa0c7c975ad305df8995a509ed3426ad0384ebfff20663fd58b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
