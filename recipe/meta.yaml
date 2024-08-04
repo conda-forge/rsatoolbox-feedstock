@@ -47,12 +47,13 @@ test:
 
 about:
   home: https://github.com/rsagroup/rsatoolbox
-  summary: Representational Similarity Analysis (RSA) in Python
+  summary: Representational Similarity Analysis (RSA)
   license: MIT
   license_file: LICENSE
   doc_url: https://rsatoolbox.readthedocs.io/
   dev_url: https://github.com/rsagroup/rsatoolbox
+  description: Representational Similarity Analysis (RSA)
 
 extra:
   recipe-maintainers:
-    - ilogue
+    - JasperVanDenBosch
