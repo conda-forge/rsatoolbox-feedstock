@@ -1,5 +1,5 @@
 {% set name = "rsatoolbox" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rsatoolbox-{{ version }}.tar.gz
-  sha256: f519b018ac4b4ce215848d51501ec1f5ea10dc35a31ea9d810cfd115100affa2
+  sha256: ecdcb50387c4b6330077ec2a3a221696078071319b8a0c32ed8128cd38da6863
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython
@@ -30,10 +31,12 @@ requirements:
     - pandas
     - scikit-learn
     - scikit-image
-    - matplotlib-base
+    - matplotlib-base !=3.9.1
     - h5py
     - joblib
     - tqdm
+    - networkx
+    - importlib_resources  # [py<39]
 
 test:
   imports:
@@ -46,7 +49,8 @@ test:
 
 about:
   home: https://github.com/rsagroup/rsatoolbox
-  summary: Representational Similarity Analysis (RSA) in Python
+  summary: Representational Similarity Analysis (RSA)
+  description: Representational Similarity Analysis (RSA)
   license: MIT
   license_file: LICENSE
   doc_url: https://rsatoolbox.readthedocs.io/
@@ -54,4 +58,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - ilogue
+    - JasperVanDenBosch
