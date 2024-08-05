@@ -31,7 +31,7 @@ requirements:
     - pandas
     - scikit-learn
     - scikit-image
-    - matplotlib-base
+    - matplotlib-base!=3.9.1
     - h5py
     - joblib
     - tqdm
