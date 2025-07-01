@@ -31,12 +31,11 @@ requirements:
     - pandas
     - scikit-learn
     - scikit-image
-    - matplotlib-base !=3.9.1
+    - matplotlib-base
     - h5py
     - joblib
     - tqdm
     - networkx
-    - importlib_resources  # [py<39]
 
 test:
   imports:
