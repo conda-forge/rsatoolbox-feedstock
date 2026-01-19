@@ -268,6 +268,3 @@ Feedstock Maintainers
 
 * [@JasperVanDenBosch](https://github.com/JasperVanDenBosch/)
 
-
-<!-- dummy commit to enable rerendering -->
-
