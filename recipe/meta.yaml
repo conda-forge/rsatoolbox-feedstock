@@ -10,16 +10,21 @@ source:
   sha256: e696f1c896ab80197fe0abd3556cce2989f107de494397ca9bef5a434823334c
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - cython
+    - numpy
     - scipy
     - setuptools
     - setuptools-scm
